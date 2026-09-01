@@ -1,5 +1,5 @@
 /* The four categories: slug, title, blurb, cover image.
-   Plain data — edit this file to change the site.
+   Plain data - edit this file to change the site.
 
    It's a .js file rather than .json on purpose: a JSON file has to be fetched,
    and fetch() is blocked when the page is opened straight off the disk

@@ -1,6 +1,6 @@
 # elmerlodemel.com
 
-Static site — no build step, no framework, no CMS.
+Static site - no build step, no framework, no CMS.
 
 ```
 index.html          indigo bar · autoplaying reel + logo → "Explore my work" cards → contact
@@ -16,7 +16,7 @@ assets/video/reel.mp4, assets/img/reel-poster.jpg
 
 ## Running it
 
-Just open `index.html` — double-clicking it works. It also works from any
+Just open `index.html` - double-clicking it works. It also works from any
 server if you'd rather:
 
 ```bash
@@ -26,7 +26,7 @@ python3 -m http.server 8000
 The data lives in `.js` files rather than `.json` for exactly this reason: a
 JSON file has to be fetched, and browsers block `fetch()` on pages opened from
 the disk, which left the page stuck on "Loading work…" with nothing to click.
-Loading the data as ordinary scripts sidesteps that. They're still plain data —
+Loading the data as ordinary scripts sidesteps that. They're still plain data -
 one array per file.
 
 ## Retuning the look
@@ -47,11 +47,11 @@ height so nothing hides underneath.
 ## The hero reel
 
 `index.html` sets `data-start="2.6"` on the `<video>`. The reel opens with its
-own "ELMER LØDEMEL — animation reel 2026" title card, which runs to about 2.4s
+own "ELMER LØDEMEL - animation reel 2026" title card, which runs to about 2.4s
 and would sit right under the logo overlay; `data-start` skips past it, on first
 play and again on every loop. Set it to `0` to play from the first frame.
 
-Autoplay only works muted — that's a browser rule, not a choice. The "Sound off"
+Autoplay only works muted - that's a browser rule, not a choice. The "Sound off"
 pill hands the audio back. If a browser blocks even muted autoplay, the poster
 shows and the pill becomes "Play reel". With `prefers-reduced-motion` the reel
 doesn't autoplay and the pill becomes a play/pause toggle.
@@ -97,9 +97,9 @@ gallery would lead with, so put your strongest one first.
 
 To change what a category card shows on the front page, edit its `cover` in
 `data/categories.js`. Note the folder on disk for Backgrounds is still
-`assets/img/concept-world/` — only the display name changed.
+`assets/img/concept-world/` - only the display name changed.
 
-## The NDA tiles — read this
+## The NDA tiles - read this
 
 `{ "type": "locked" }` renders a password box. **It is not security.** The
 password sits in `data/projects.js`, which anyone can read by viewing source,
@@ -111,10 +111,39 @@ now the two tiles reveal only a short "get in touch" line, which is safe. If a
 studio ever lets you show the work, host it somewhere with real access control
 and link out.
 
+## Why YouTube embeds look broken locally
+
+Opening the site from the disk gives the page no real origin, and YouTube
+refuses to embed there - you get "Video player configuration error / Error
+153". Nothing is wrong with the link; the same embed plays fine over http. The
+site works around it: YouTube items render as a poster with a play button, and
+clicking opens YouTube in a new tab from `file://` or swaps in the player when
+served. Vimeo has no such restriction.
+
+## Storyboard panels from a PDF
+
+`assets/img/storyboards/among-giants/` was generated from
+`amonggiants_strybrd_panels.pdf`. To redo it after updating the PDF:
+
+```bash
+python3 -m pip install --user pymupdf
+python3 - <<'EOF'
+import fitz
+doc = fitz.open("amonggiants_strybrd_panels.pdf")
+for i, page in enumerate(doc, 1):
+    zoom = 1600 / page.rect.width
+    page.get_pixmap(matrix=fitz.Matrix(zoom, zoom)).pil_save(
+        f"assets/img/storyboards/among-giants/panel-{i:03d}.jpg",
+        format="JPEG", quality=82, optimize=True)
+EOF
+```
+
+Then update the `images` list on the `deck` item in `data/projects.js`.
+
 ## Videos
 
 The site serves compressed copies. Masters live in `assets/video/_masters/`,
-which git ignores — keep them, don't push them.
+which git ignores - keep them, don't push them.
 
 ```bash
 # re-compress a reel after replacing the master
@@ -129,7 +158,7 @@ crawl on mobile data.
 
 ## Wiring the contact form
 
-The form posts nowhere by default — submitting opens a pre-filled mail draft to
+The form posts nowhere by default - submitting opens a pre-filled mail draft to
 elmer@revestreker.com. To take real submissions, set an endpoint from a form
 service (Formspree, Basin, Netlify Forms):
 
@@ -141,7 +170,7 @@ The hidden `company` field is a honeypot; leave it alone.
 
 ## Deploying
 
-The site is plain files — any static host works. For GitHub Pages:
+The site is plain files - any static host works. For GitHub Pages:
 
 ```bash
 gh auth login
@@ -150,7 +179,7 @@ gh api -X POST repos/:owner/elmerlodemel-portfolio/pages -f source[branch]=main 
 ```
 
 After that it's live at `https://<your-user>.github.io/elmerlodemel-portfolio/`.
-Pointing elmerlodemel.com at it is a separate DNS change — don't do it until
+Pointing elmerlodemel.com at it is a separate DNS change - don't do it until
 you're happy with the site, since it replaces what's live now.
 
 ## Notes

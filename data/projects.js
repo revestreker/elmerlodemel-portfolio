@@ -1,5 +1,5 @@
 /* Every project, grouped by category.
-   Plain data — edit this file to change the site.
+   Plain data - edit this file to change the site.
 
    It's a .js file rather than .json on purpose: a JSON file has to be fetched,
    and fetch() is blocked when the page is opened straight off the disk
@@ -10,7 +10,7 @@ window.PROJECTS = [
   {
     "title": "Among Giants",
     "category": "Character Design",
-    "description": "Character work for Among Giants — turnarounds, expression sheets and design studies.",
+    "description": "Character work for Among Giants - turnarounds, expression sheets and design studies.",
     "items": [
       "assets/img/character-design/among-giants/pickyMic_turnaround_lineup_v003.jpg",
       "assets/img/character-design/among-giants/pickyMic_expressions.jpg",
@@ -25,7 +25,7 @@ window.PROJECTS = [
   {
     "title": "Mini Mic",
     "category": "Character Design",
-    "description": "Pre-production character design for Mini Mic — silhouettes, line-ups, concepts and turnarounds.",
+    "description": "Pre-production character design for Mini Mic - silhouettes, line-ups, concepts and turnarounds.",
     "items": [
       "assets/img/character-design/mini-mic/characters_redo_lineUp19.jpg",
       "assets/img/character-design/mini-mic/Guys_concept.jpg",
@@ -52,7 +52,7 @@ window.PROJECTS = [
     ]
   },
   {
-    "title": "Service Bus — Characters",
+    "title": "Service Bus - Characters",
     "category": "Character Design",
     "description": "Character designs for Service Bus, from silhouette exploration through turnarounds and expression sheets.",
     "items": [
@@ -80,7 +80,7 @@ window.PROJECTS = [
     ]
   },
   {
-    "title": "Revestreker — 2.5D Scene",
+    "title": "Revestreker - 2.5D Scene",
     "category": "Backgrounds",
     "description": "Location design and look development for Revestreker, rendered as a 2.5D set in Blender.",
     "items": [
@@ -112,7 +112,7 @@ window.PROJECTS = [
     ]
   },
   {
-    "title": "Service Bus — Environments",
+    "title": "Service Bus - Environments",
     "category": "Backgrounds",
     "description": "Environment paintings and colour scripts for Service Bus, built in Blender and painted over for a 2.5D look.",
     "items": [
@@ -131,7 +131,7 @@ window.PROJECTS = [
   {
     "title": "World & Concept Studies",
     "category": "Backgrounds",
-    "description": "Concept and world-building studies — vehicle design, colour scripts and environment keys.",
+    "description": "Concept and world-building studies - vehicle design, colour scripts and environment keys.",
     "items": [
       "assets/img/concept-world/studies/h400-14ecee5c-7056-43dc-b105-9fcf761b27a6-68f7d7.jpg",
       "assets/img/concept-world/studies/h400-97402cc3-c195-4ef3-b7db-d003080c5c06-25033e.jpg",
@@ -147,7 +147,7 @@ window.PROJECTS = [
     ]
   },
   {
-    "title": "Yard Mission — Storyboards",
+    "title": "Yard Mission - Storyboards",
     "category": "Storyboards",
     "description": "Storyboard thumbnails for the Yardmission project.",
     "items": [
@@ -161,38 +161,125 @@ window.PROJECTS = [
     ]
   },
   {
-    "title": "Service Bus — Storyboards",
+    "title": "Service Bus - Storyboards",
     "category": "Storyboards",
     "description": "Storyboards for Service Bus, from thumbnail passes through turnarounds and expression sheets used for boarding.",
     "items": [
       {
-        "type": "vimeo",
-        "id": "1063171990",
-        "title": "Pitch animatic"
+        "type": "row",
+        "items": [
+          {
+            "type": "vimeo",
+            "id": "1063171990",
+            "title": "Pitch animatic",
+            "text": "This is the animatic I made to explore and learn how to make an animatic in Blender. I pitched this version of the film to my class at The Animation Workshop to be a graduation film, which it went on to become."
+          },
+          {
+            "type": "vimeo",
+            "id": "1051852019",
+            "hash": "b982cfd35d",
+            "title": "Final film",
+            "text": "Here is the final graduation film that I directed. The story is short and fun, where we find out what happens when you press the mysterious service button on a bus."
+          }
+        ]
       },
       {
-        "type": "vimeo",
-        "id": "1051852019",
-        "hash": "b982cfd35d",
-        "title": "Final film"
-      },
-      "assets/img/storyboards/service-bus/w400-board04-c5919f.jpg",
-      "assets/img/storyboards/service-bus/w400-board03-45b6d0.jpg",
-      "assets/img/storyboards/service-bus/w400-board02-45b6d0.jpg",
-      "assets/img/storyboards/service-bus/w400-board01-45b6d0.jpg"
+        "type": "row",
+        "columns": 4,
+        "items": [
+          "assets/img/storyboards/service-bus/w400-board04-c5919f.jpg",
+          "assets/img/storyboards/service-bus/w400-board03-45b6d0.jpg",
+          "assets/img/storyboards/service-bus/w400-board02-45b6d0.jpg",
+          "assets/img/storyboards/service-bus/w400-board01-45b6d0.jpg"
+        ]
+      }
     ]
   },
   {
-    "title": "Among Giants — Storyboards",
+    "title": "Among Giants - Storyboards",
     "category": "Storyboards",
     "description": "",
     "items": [
       {
-        "type": "speakerdeck",
-        "id": "9f2075865de14dd391d3d34a0895ac93",
-        "ratio": "710/297",
-        "title": "Among Giants — WIP storyboards",
-        "href": "https://speakerdeck.com/revestreken/among-giants-wip-storyboards"
+        "type": "deck",
+        "title": "Among Giants - storyboard panels",
+        "ratio": "2.386",
+        "images": [
+          "assets/img/storyboards/among-giants/panel-001.jpg",
+          "assets/img/storyboards/among-giants/panel-002.jpg",
+          "assets/img/storyboards/among-giants/panel-003.jpg",
+          "assets/img/storyboards/among-giants/panel-004.jpg",
+          "assets/img/storyboards/among-giants/panel-005.jpg",
+          "assets/img/storyboards/among-giants/panel-006.jpg",
+          "assets/img/storyboards/among-giants/panel-007.jpg",
+          "assets/img/storyboards/among-giants/panel-008.jpg",
+          "assets/img/storyboards/among-giants/panel-009.jpg",
+          "assets/img/storyboards/among-giants/panel-010.jpg",
+          "assets/img/storyboards/among-giants/panel-011.jpg",
+          "assets/img/storyboards/among-giants/panel-012.jpg",
+          "assets/img/storyboards/among-giants/panel-013.jpg",
+          "assets/img/storyboards/among-giants/panel-014.jpg",
+          "assets/img/storyboards/among-giants/panel-015.jpg",
+          "assets/img/storyboards/among-giants/panel-016.jpg",
+          "assets/img/storyboards/among-giants/panel-017.jpg",
+          "assets/img/storyboards/among-giants/panel-018.jpg",
+          "assets/img/storyboards/among-giants/panel-019.jpg",
+          "assets/img/storyboards/among-giants/panel-020.jpg",
+          "assets/img/storyboards/among-giants/panel-021.jpg",
+          "assets/img/storyboards/among-giants/panel-022.jpg",
+          "assets/img/storyboards/among-giants/panel-023.jpg",
+          "assets/img/storyboards/among-giants/panel-024.jpg",
+          "assets/img/storyboards/among-giants/panel-025.jpg",
+          "assets/img/storyboards/among-giants/panel-026.jpg",
+          "assets/img/storyboards/among-giants/panel-027.jpg",
+          "assets/img/storyboards/among-giants/panel-028.jpg",
+          "assets/img/storyboards/among-giants/panel-029.jpg",
+          "assets/img/storyboards/among-giants/panel-030.jpg",
+          "assets/img/storyboards/among-giants/panel-031.jpg",
+          "assets/img/storyboards/among-giants/panel-032.jpg",
+          "assets/img/storyboards/among-giants/panel-033.jpg",
+          "assets/img/storyboards/among-giants/panel-034.jpg",
+          "assets/img/storyboards/among-giants/panel-035.jpg",
+          "assets/img/storyboards/among-giants/panel-036.jpg",
+          "assets/img/storyboards/among-giants/panel-037.jpg",
+          "assets/img/storyboards/among-giants/panel-038.jpg",
+          "assets/img/storyboards/among-giants/panel-039.jpg",
+          "assets/img/storyboards/among-giants/panel-040.jpg",
+          "assets/img/storyboards/among-giants/panel-041.jpg",
+          "assets/img/storyboards/among-giants/panel-042.jpg",
+          "assets/img/storyboards/among-giants/panel-043.jpg",
+          "assets/img/storyboards/among-giants/panel-044.jpg",
+          "assets/img/storyboards/among-giants/panel-045.jpg",
+          "assets/img/storyboards/among-giants/panel-046.jpg",
+          "assets/img/storyboards/among-giants/panel-047.jpg",
+          "assets/img/storyboards/among-giants/panel-048.jpg",
+          "assets/img/storyboards/among-giants/panel-049.jpg",
+          "assets/img/storyboards/among-giants/panel-050.jpg",
+          "assets/img/storyboards/among-giants/panel-051.jpg",
+          "assets/img/storyboards/among-giants/panel-052.jpg",
+          "assets/img/storyboards/among-giants/panel-053.jpg",
+          "assets/img/storyboards/among-giants/panel-054.jpg",
+          "assets/img/storyboards/among-giants/panel-055.jpg",
+          "assets/img/storyboards/among-giants/panel-056.jpg",
+          "assets/img/storyboards/among-giants/panel-057.jpg",
+          "assets/img/storyboards/among-giants/panel-058.jpg",
+          "assets/img/storyboards/among-giants/panel-059.jpg",
+          "assets/img/storyboards/among-giants/panel-060.jpg",
+          "assets/img/storyboards/among-giants/panel-061.jpg",
+          "assets/img/storyboards/among-giants/panel-062.jpg",
+          "assets/img/storyboards/among-giants/panel-063.jpg",
+          "assets/img/storyboards/among-giants/panel-064.jpg",
+          "assets/img/storyboards/among-giants/panel-065.jpg",
+          "assets/img/storyboards/among-giants/panel-066.jpg",
+          "assets/img/storyboards/among-giants/panel-067.jpg",
+          "assets/img/storyboards/among-giants/panel-068.jpg",
+          "assets/img/storyboards/among-giants/panel-069.jpg",
+          "assets/img/storyboards/among-giants/panel-070.jpg",
+          "assets/img/storyboards/among-giants/panel-071.jpg",
+          "assets/img/storyboards/among-giants/panel-072.jpg",
+          "assets/img/storyboards/among-giants/panel-073.jpg",
+          "assets/img/storyboards/among-giants/panel-074.jpg"
+        ]
       },
       {
         "type": "vimeo",
@@ -202,26 +289,25 @@ window.PROJECTS = [
     ]
   },
   {
-    "title": "Hidden Islands (TV-series) — OYA Studio",
+    "title": "Under NDA",
     "category": "Storyboards",
-    "description": "",
     "items": [
       {
-        "type": "locked",
-        "password": "changeme",
-        "note": "Boards for this series are under NDA. Get in touch and I'll walk you through them."
-      }
-    ]
-  },
-  {
-    "title": "HØJ S2 (TV-series) — Skjaldborn",
-    "category": "Storyboards",
-    "description": "",
-    "items": [
-      {
-        "type": "locked",
-        "password": "changeme",
-        "note": "Boards for this series are under NDA. Get in touch and I'll walk you through them."
+        "type": "row",
+        "items": [
+          {
+            "type": "locked",
+            "name": "Hidden Islands (TV-series) - OYA Studio",
+            "password": "changeme",
+            "note": "Boards for this series are under NDA. Get in touch and I'll walk you through them."
+          },
+          {
+            "type": "locked",
+            "name": "HØJ S2 (TV-series) - Skjaldborn",
+            "password": "changeme",
+            "note": "Boards for this series are under NDA. Get in touch and I'll walk you through them."
+          }
+        ]
       }
     ]
   },
@@ -231,8 +317,9 @@ window.PROJECTS = [
     "description": "",
     "items": [
       {
-        "type": "youtube",
-        "id": "8LwFnl3DYJo",
+        "type": "video",
+        "src": "assets/video/showreel-2026.mp4",
+        "poster": "assets/img/Elmerlodemel_reel_still.jpg",
         "title": "Animation showreel 2026"
       }
     ]
@@ -248,16 +335,11 @@ window.PROJECTS = [
         "image": "assets/img/other/brita-svani-game/bg-living-room.jpg",
         "label": "Play the game",
         "feature": true
-      },
-      "assets/img/other/brita-svani-game/bg-exterior-v004.jpg",
-      "assets/img/other/brita-svani-game/bg-exterior.jpg",
-      "assets/img/other/brita-svani-game/bg-interior-values.jpg",
-      "assets/img/other/brita-svani-game/cat-portrait.png",
-      "assets/img/other/brita-svani-game/character-brita.png"
+      }
     ]
   },
   {
-    "title": "Ecokrim — Concert Visuals",
+    "title": "Ecokrim - Concert Visuals",
     "category": "Other",
     "description": "Live VJ visuals created for an Ekokrim concert performance.",
     "items": [
@@ -265,7 +347,9 @@ window.PROJECTS = [
         "type": "youtube",
         "id": "nWvSk3ubPF8",
         "start": 1762,
-        "title": "Ecokrim live at Geiteberg Kulturbruk"
+        "title": "Ecokrim live at Geiteberg Kulturbruk",
+        "poster": "assets/img/other/ekokrim/frame-winter-sh030.jpg",
+        "href": "https://www.youtube.com/watch?v=nWvSk3ubPF8&t=1762s"
       },
       "assets/img/other/ekokrim/frame-layingongrass.jpg",
       "assets/img/other/ekokrim/frame-var-frontwalk.jpg",
@@ -275,7 +359,7 @@ window.PROJECTS = [
   {
     "title": "Gangar Reels",
     "category": "Other",
-    "description": "Frames from the Gangar series — animated renders of traditional Norwegian gangar dance figures.",
+    "description": "Frames from the Gangar series - animated renders of traditional Norwegian gangar dance figures.",
     "items": [
       "assets/img/other/gangar-reels/frame-martajohannes.jpg",
       "assets/img/other/gangar-reels/frame-vossavalsen.jpg"
