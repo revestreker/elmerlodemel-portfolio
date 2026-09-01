@@ -8,16 +8,36 @@
 */
 window.PROJECTS = [
   {
+    "title": "Mr. Mafia Man",
+    "category": "Character Design",
+    "description": "Character design and development for Mr. Mafia Man, including model sheets, expressions and a short animation test.",
+    "items": [
+      {
+        "type": "video",
+        "src": "assets/video/mafia-monologue.mp4",
+        "poster": "assets/img/character-design/mr-mafia-man/h400-c815eeaf-4ffe-4bea-9291-26060ac31a67-c666d5.jpg",
+        "title": "Short little monologue"
+      },
+      {
+        "type": "video",
+        "src": "assets/video/mafia-loop.mp4",
+        "loop": true,
+        "width": "26rem"
+      },
+      "assets/img/character-design/mr-mafia-man/h400-mr-mafia-man-1-65f01e.jpg",
+      "assets/img/character-design/mr-mafia-man/h400-a4cd2f0b-2b7d-4cd3-b285-3a65ffd45201-d65988.jpg",
+      "assets/img/character-design/mr-mafia-man/h400-characterdesign-mafia-workingfile-v002-1-9a42a4.jpg",
+      "assets/img/character-design/mr-mafia-man/h400-mr-mafia-man-29486a.jpg"
+    ]
+  },
+  {
     "title": "Among Giants",
     "category": "Character Design",
     "description": "Character work for Among Giants - turnarounds, expression sheets and design studies.",
     "items": [
       "assets/img/character-design/among-giants/pickyMic_turnaround_lineup_v003.jpg",
-      "assets/img/character-design/among-giants/pickyMic_expressions.jpg",
       "assets/img/character-design/among-giants/Loose_Bruce_Turnaround.jpg",
-      "assets/img/character-design/among-giants/Loose_Bruce_expressions.jpg",
       "assets/img/character-design/among-giants/img-3103-43b922.jpg",
-      "assets/img/character-design/among-giants/img-3118-1b83a1.jpg",
       "assets/img/character-design/among-giants/img-3125-45fe24.jpg",
       "assets/img/character-design/among-giants/img-3131-33e08d.jpg"
     ]
@@ -36,19 +56,6 @@ window.PROJECTS = [
       "assets/img/character-design/mini-mic/pre-prod_chdesign_lady.jpg",
       "assets/img/character-design/mini-mic/silhuettes.jpg",
       "assets/img/character-design/mini-mic/turnaround_.jpg"
-    ]
-  },
-  {
-    "title": "Mr. Mafia Man",
-    "category": "Character Design",
-    "description": "Character design and development for Mr. Mafia Man, including model sheets, expressions and a short animation test.",
-    "items": [
-      "assets/img/character-design/mr-mafia-man/h400-mr-mafia-man-1-65f01e.jpg",
-      "assets/img/character-design/mr-mafia-man/h400-a4cd2f0b-2b7d-4cd3-b285-3a65ffd45201-d65988.jpg",
-      "assets/img/character-design/mr-mafia-man/h400-c815eeaf-4ffe-4bea-9291-26060ac31a67-c666d5.jpg",
-      "assets/img/character-design/mr-mafia-man/h400-characterdesign-mafia-workingfile-v002-1-9a42a4.jpg",
-      "assets/img/character-design/mr-mafia-man/h400-mr-mafia-man-29486a.jpg",
-      "assets/img/character-design/mr-mafia-man/hqdefault.jpg"
     ]
   },
   {

@@ -534,17 +534,28 @@
       case 'video': {
         var video = document.createElement('video');
         video.className = 'feature-player';
-        video.controls = true;
         video.playsInline = true;
         video.preload = 'metadata';
         if (item.poster) video.poster = item.poster;
+
+        /* A `loop` clip stands in for a GIF: silent, endless, no chrome. */
+        if (item.loop) {
+          video.loop = true;
+          video.muted = true;
+          video.autoplay = true;
+          video.setAttribute('aria-label', item.title || 'Animation loop');
+        } else {
+          video.controls = true;
+        }
 
         var source = document.createElement('source');
         source.src = item.src;
         source.type = 'video/mp4';
         video.appendChild(source);
 
-        return media('feature-video', video, item.title);
+        var block = media('feature-video', video, item.title);
+        if (item.width) block.style.maxWidth = item.width;
+        return block;
       }
 
       case 'link': {
