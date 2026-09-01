@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elmer Lødemel — Art Direction, Direction &amp; Design</title>
+<meta name="description" content="Elmer Lødemel — art direction, direction and design. Character design, concept and world design, storyboards.">
+<meta name="theme-color" content="#4A28E6">
+
+<meta property="og:title" content="Elmer Lødemel — Art Direction, Direction &amp; Design">
+<meta property="og:description" content="Character design, concept and world design, storyboards.">
+<meta property="og:image" content="assets/img/reel-poster.jpg">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#work">Skip to work</a>
+
+<!-- ═══════════════════════  indigo bar  ═══════════════════════ -->
+<nav class="topbar" aria-label="Primary">
+  <div class="topbar-inner">
+    <a class="topbar-mark" href="index.html">Elmer Lødemel</a>
+    <ul class="topbar-links" id="topbar-links"></ul>
+  </div>
+</nav>
+
+<!-- ══════════════  1. Reel — autoplaying, name overlaid  ══════════════ -->
+<header class="hero" id="top">
+
+  <!-- data-start skips the reel's own "ELMER LØDEMEL" title card so it doesn't
+       collide with the logo overlay. Set it to 0 to play from the very first frame. -->
+  <video
+    class="hero-video"
+    autoplay muted loop playsinline
+    data-start="2.6"
+    preload="auto"
+    poster="assets/img/reel-poster.jpg"
+    aria-label="Showreel">
+    <source src="assets/video/reel.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-scrim" aria-hidden="true"></div>
+
+  <div class="hero-overlay">
+    <img class="hero-logo" src="assets/logo/elmerlodemel-logo-white.svg" alt="Elmer Lødemel" width="741" height="426">
+    <p class="hero-tagline">Art Direction, Direction &amp; Design</p>
+  </div>
+
+  <a class="hero-scroll" href="#work" aria-label="Scroll to work">
+    <span>Explore my work</span>
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+      <path d="M12 4v14m0 0 6-6m-6 6-6-6" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+
+  <button class="hero-sound" id="hero-sound" type="button" aria-pressed="false">
+    <span class="hero-sound-label">Sound off</span>
+  </button>
+</header>
+
+<!-- ══════════════  2. Explore my work — category cards  ══════════════ -->
+<section class="work" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <h2 class="section-title" id="work-title">Explore my work</h2>
+    <div class="cards" id="cards">
+      <p class="status">Loading work…</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════  3. Contact  ═══════════════════════════ -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+   <div class="contact-card">
+    <h2 class="section-title" id="contact-title">Let’s connect</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-details">
+        <p class="contact-lead">Open to freelance and studio work.</p>
+
+        <a class="contact-email" href="mailto:elmer@revestreker.com">elmer@revestreker.com</a>
+
+        <ul class="socials" id="socials"></ul>
+      </div>
+
+      <!--
+        Static hosting can't send mail on its own. Point `action` at a form
+        service (Formspree, Basin, Netlify Forms…) and this works as-is.
+        Until then the JS falls back to opening a pre-filled mail draft.
+      -->
+      <form class="contact-form" id="contact-form" action="" method="POST" novalidate>
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+
+        <!-- honeypot: bots fill it, people never see it -->
+        <div class="field field-hp" aria-hidden="true">
+          <label for="cf-company">Company</label>
+          <input type="text" id="cf-company" name="company" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="submit">Send message</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+    </div>
+   </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year">2026</span> Elmer Lødemel</p>
+    <button class="to-top" id="to-top" type="button">
+      Back to top
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+        <path d="M12 20V6m0 0-6 6m6-6 6 6" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</footer>
+
+<script src="data/categories.js"></script>
+<script src="data/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

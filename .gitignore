@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Video masters — the site serves the compressed copies in assets/video/.
+# Keep these locally; they're far too big for git.
+assets/video/_masters/
+
+# Source files that aren't web assets
+*.psd
+*.mov
+*.ai
+*.clip
