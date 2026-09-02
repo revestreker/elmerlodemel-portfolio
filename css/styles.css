@@ -637,6 +637,18 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .feature-wide { max-width: 68rem; }
 
 
+/* --- a section centred on the page --------------------------------------- */
+
+.project.is-centered .project-head { justify-content: center; }
+
+.project.is-centered .feature,
+.project.is-centered .shots,
+.project.is-centered .deck { margin-inline: auto; }
+
+.project.is-centered .feature-caption,
+.project.is-centered .feature-text,
+.project.is-centered .deck-bar { text-align: center; justify-content: center; }
+
 /* --- rows: items across instead of stacked ------------------------------- */
 
 .row {
@@ -734,7 +746,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   font-size: 1.6rem;
   line-height: 1;
   color: var(--white);
-  opacity: 0;
+  opacity: .85;
   transition: opacity .25s var(--ease), background-color .2s var(--ease), color .2s var(--ease);
 }
 

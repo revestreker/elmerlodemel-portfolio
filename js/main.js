@@ -80,6 +80,7 @@
     return {
       title: p.title || 'Untitled',
       category: p.category || '',
+      align: p.align || '',
       items: items,
       images: stills
     };
@@ -318,7 +319,7 @@
     }
 
     projectsInView.forEach(function (project, projectIndex) {
-      var section = el('section', 'project');
+      var section = el('section', 'project' + (project.align === 'center' ? ' is-centered' : ''));
 
       var head = el('div', 'project-head');
       head.appendChild(el('h2', 'project-title', project.title));
@@ -408,22 +409,48 @@
 
     if (item.max) row.style.maxWidth = item.max;
 
+    var pictures = [];
+
     kids.forEach(function (kid) {
       var cell = el('div', 'row-cell');
 
       if (kid.kind === 'image') {
         var list = el('ul', 'shots shots-plain');
-        list.appendChild(buildShot(project, kid, projectIndex, frames.next++));
+        var li = buildShot(project, kid, projectIndex, frames.next++);
+        list.appendChild(li);
         cell.appendChild(list);
+        pictures.push({ img: li.querySelector('img'), scale: Number(kid.scale) || 1 });
       } else {
         var block = buildMedia(kid, project, projectIndex, frames);
         if (block) { block.classList.remove('feature'); cell.appendChild(block); }
+        pictures.push(null);
       }
 
       row.appendChild(cell);
     });
 
+    /* With equal columns a portrait next to two landscapes towers over them.
+       Sizing each column by aspect ratio gives the row one common height;
+       a per-image `scale` then shrinks one without unbalancing the rest. */
+    if (!item.template && pictures.length > 1 && pictures.every(Boolean)) {
+      justify(row, pictures);
+    }
+
     return row;
+  }
+
+  function justify(row, pictures) {
+    function apply() {
+      if (!pictures.every(function (p) { return p.img.naturalWidth; })) return;
+      row.style.gridTemplateColumns = pictures.map(function (p) {
+        return (p.img.naturalWidth / p.img.naturalHeight * p.scale).toFixed(4) + 'fr';
+      }).join(' ');
+    }
+
+    pictures.forEach(function (p) {
+      if (p.img.complete) apply();
+      else p.img.addEventListener('load', apply, { once: true });
+    });
   }
 
   /* YouTube refuses to embed on pages with no real origin - opening the site

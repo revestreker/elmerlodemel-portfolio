@@ -45,20 +45,28 @@ window.PROJECTS = [
     "category": "Character Design",
     "description": "Character work for Among Giants - turnarounds, expression sheets and design studies.",
     "items": [
-      "assets/img/character-design/among-giants/img-3131-33e08d.jpg",
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/among-giants/img-3131-33e08d.jpg"
+        ],
+        "max": "46rem"
+      },
       {
         "type": "row",
         "items": [
           "assets/img/character-design/among-giants/pickyMic_turnaround_lineup_v003.jpg",
           "assets/img/character-design/among-giants/Loose_Bruce_Turnaround.jpg"
-        ]
+        ],
+        "max": "60rem"
       },
       {
         "type": "row",
         "items": [
           "assets/img/character-design/among-giants/img-3103-43b922.jpg",
           "assets/img/character-design/among-giants/img-3125-45fe24.jpg"
-        ]
+        ],
+        "max": "28rem"
       }
     ]
   },
@@ -72,28 +80,32 @@ window.PROJECTS = [
         "items": [
           "assets/img/character-design/mini-mic/Guys_concept.jpg",
           "assets/img/character-design/mini-mic/Guys_turnaround.jpg"
-        ]
+        ],
+        "template": "minmax(0, 35rem) minmax(0, 20rem)"
       },
       {
         "type": "row",
         "items": [
           "assets/img/character-design/mini-mic/Mike.jpg",
           "assets/img/character-design/mini-mic/turnaround_.jpg"
-        ]
+        ],
+        "max": "42rem"
       },
       {
         "type": "row",
         "items": [
           "assets/img/character-design/mini-mic/Ladies_concept.jpg",
           "assets/img/character-design/mini-mic/pre-prod_chdesign_lady.jpg"
-        ]
+        ],
+        "max": "42rem"
       },
       {
         "type": "row",
         "items": [
           "assets/img/character-design/mini-mic/MikeMightFight%202.jpg",
           "assets/img/character-design/mini-mic/silhuettes.jpg"
-        ]
+        ],
+        "max": "42rem"
       }
     ]
   },
@@ -106,10 +118,12 @@ window.PROJECTS = [
         "type": "row",
         "items": [
           "assets/img/character-design/service-bus/h400-sb-characterdesign-004-e72fcf.png",
-          "assets/img/character-design/service-bus/h400-rolf-faces-416b51.png",
+          {
+            "src": "assets/img/character-design/service-bus/h400-rolf-faces-416b51.png",
+            "scale": 0.78
+          },
           "assets/img/character-design/service-bus/h400-sb-characterdesign-003-4b1d71.png"
-        ],
-        "template": "minmax(0, 1fr) minmax(0, .78fr) minmax(0, 1fr)"
+        ]
       },
       {
         "type": "row",
@@ -156,7 +170,8 @@ window.PROJECTS = [
       "assets/img/concept-world/2.5D%20scene/locations_v005.jpg",
       "assets/img/concept-world/2.5D%20scene/location_COversions_v001-protected-intensity-DEFAULT-V2.jpg",
       "assets/img/concept-world/2.5D%20scene/revestreker_looktest_v006_frame01.jpg"
-    ]
+    ],
+    "align": "center"
   },
   {
     "title": "Blender Environment Studies",
@@ -195,21 +210,32 @@ window.PROJECTS = [
     "category": "Backgrounds",
     "description": "Environment paintings and colour scripts for Service Bus, built in Blender and painted over for a 2.5D look.",
     "items": [
-      "assets/img/concept-world/service-bus/h400-img-2285-0db030.jpg",
-      "assets/img/concept-world/service-bus/h400-looktest06-9f59cd.png",
-      "assets/img/concept-world/service-bus/h400-paintingguide-fortbbrushpack-ebe11c.png",
-      "assets/img/concept-world/service-bus/h400-tb-cliff-concept-v002-el-2cefbe.jpg",
-      "assets/img/concept-world/service-bus/h400-tb-sq001-sh010-v007-el-2be6c0.png",
-      "assets/img/concept-world/service-bus/h400-tb-sq003-sh0190-paint-v003-cb7527.png",
-      "assets/img/concept-world/service-bus/h400-tb-sq004-sh0370-paint-v005-el-f1416e.png",
-      "assets/img/concept-world/service-bus/h400-tb-sq005-sh0490-painting-v006-el-f31e09.png",
-      "assets/img/concept-world/service-bus/h400-tb-tree-concept-v004-el-lightpole-7f25f7.png",
       {
         "type": "row",
         "items": [
-          "assets/img/concept-world/service-bus/h400-cliffs-7d2925.jpg"
-        ],
-        "max": "34rem"
+          "assets/img/concept-world/service-bus/h400-tb-sq005-sh0490-painting-v006-el-f31e09.png",
+          "assets/img/concept-world/service-bus/h400-tb-sq004-sh0370-paint-v005-el-f1416e.png",
+          "assets/img/concept-world/service-bus/h400-tb-sq003-sh0190-paint-v003-cb7527.png"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/concept-world/service-bus/h400-paintingguide-fortbbrushpack-ebe11c.png",
+          "assets/img/concept-world/service-bus/h400-looktest06-9f59cd.png",
+          "assets/img/concept-world/service-bus/h400-img-2285-0db030.jpg"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/concept-world/service-bus/h400-tb-cliff-concept-v002-el-2cefbe.jpg",
+          "assets/img/concept-world/service-bus/h400-tb-tree-concept-v004-el-lightpole-7f25f7.png",
+          {
+            "src": "assets/img/concept-world/service-bus/h400-cliffs-7d2925.jpg",
+            "scale": 0.42
+          }
+        ]
       }
     ]
   },
@@ -484,7 +510,8 @@ window.PROJECTS = [
           "assets/video/gangar/outro.mp4"
         ]
       }
-    ]
+    ],
+    "align": "center"
   },
   {
     "title": "Service Bus Game",
