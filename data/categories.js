@@ -11,7 +11,7 @@ window.CATEGORIES = [
     "slug": "character-design",
     "title": "Character Design",
     "blurb": "Silhouettes, line-ups, turnarounds and expression sheets.",
-    "cover": "assets/img/character-design/mini-mic/MikeMightFight%202.jpg"
+    "cover": "assets/img/character-design/mini-mic/Guys_concept.jpg"
   },
   {
     "slug": "backgrounds",

@@ -65,12 +65,23 @@
     var items = (p.items || p.images || []).map(normalizeItem)
       .filter(function (i) { return i.kind !== 'image' || i.src; });
 
+    /* Stills can sit inside a row, so collect them in the same depth-first
+       order the renderer hands out frame indices - otherwise the lightbox
+       opens the wrong picture. Deck slides have their own viewer, so they
+       stay out of it. */
+    var stills = [];
+    (function collect(list) {
+      list.forEach(function (item) {
+        if (item.kind === 'image') stills.push(item);
+        else if (item.kind === 'row') collect((item.items || []).map(normalizeItem));
+      });
+    })(items);
+
     return {
       title: p.title || 'Untitled',
       category: p.category || '',
       items: items,
-      /* the lightbox only pages through the stills */
-      images: items.filter(function (i) { return i.kind === 'image'; })
+      images: stills
     };
   }
 
@@ -385,11 +396,17 @@
     return block;
   }
 
-  /* Items laid out across one row instead of stacked. */
+  /* Items laid out across one row instead of stacked.
+     `template` sets the column widths ("1fr .8fr 1fr" makes the middle one
+     smaller); `max` narrows the whole row, which shrinks everything in it. */
   function buildRow(item, project, projectIndex, frames) {
     var row = el('div', 'feature row');
     var kids = (item.items || []).map(normalizeItem);
-    row.style.setProperty('--row-cols', item.columns || kids.length);
+
+    if (item.template) row.style.gridTemplateColumns = item.template;
+    else row.style.setProperty('--row-cols', item.columns || kids.length);
+
+    if (item.max) row.style.maxWidth = item.max;
 
     kids.forEach(function (kid) {
       var cell = el('div', 'row-cell');
@@ -455,15 +472,28 @@
     if (!images.length) return null;
 
     var block = el('div', 'feature deck');
+    if (item.max) block.style.maxWidth = item.max;
+
     var stage = el('div', 'deck-stage');
     if (item.ratio) stage.style.aspectRatio = item.ratio;
 
+    var isClip = function (src) { return /\.(mp4|webm)$/i.test(src); };
+
     var img = new Image();
     img.className = 'deck-image';
-    img.src = images[0];
     img.alt = (item.title || 'Panel') + ' 1';
     img.decoding = 'async';
+
+    var clip = document.createElement('video');
+    clip.className = 'deck-image';
+    clip.loop = true;
+    clip.muted = true;
+    clip.autoplay = true;
+    clip.playsInline = true;
+    clip.hidden = true;
+
     stage.appendChild(img);
+    stage.appendChild(clip);
 
     var prev = el('button', 'deck-nav deck-prev', '‹');
     var next = el('button', 'deck-nav deck-next', '›');
@@ -482,11 +512,26 @@
     var at = 0;
     function show(i) {
       at = (i + images.length) % images.length;
-      img.src = images[at];
-      img.alt = (item.title || 'Panel') + ' ' + (at + 1);
+      var src = images[at];
+
+      if (isClip(src)) {
+        clip.src = src;
+        clip.hidden = false;
+        img.hidden = true;
+        clip.play();
+      } else {
+        clip.pause();
+        clip.hidden = true;
+        img.hidden = false;
+        img.src = src;
+        img.alt = (item.title || 'Panel') + ' ' + (at + 1);
+      }
+
       counter.textContent = (at + 1) + ' / ' + images.length;
       range.value = String(at);
-      var ahead = new Image(); ahead.src = images[(at + 1) % images.length];
+
+      var next = images[(at + 1) % images.length];
+      if (!isClip(next)) { var ahead = new Image(); ahead.src = next; }
     }
 
     prev.addEventListener('click', function () { show(at - 1); });
@@ -506,6 +551,8 @@
       else if (event.key === 'ArrowLeft') { event.preventDefault(); show(at - 1); }
     });
     stage.tabIndex = 0;
+
+    show(0);                       /* after `range` exists - show() writes to it */
 
     block.appendChild(stage);
     block.appendChild(bar);

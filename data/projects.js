@@ -19,15 +19,25 @@ window.PROJECTS = [
         "title": "Short little monologue"
       },
       {
-        "type": "video",
-        "src": "assets/video/mafia-loop.mp4",
-        "loop": true,
-        "width": "26rem"
+        "type": "row",
+        "items": [
+          {
+            "type": "video",
+            "src": "assets/video/mafia-loop.mp4",
+            "loop": true
+          },
+          "assets/img/character-design/mr-mafia-man/h400-characterdesign-mafia-workingfile-v002-1-9a42a4.jpg"
+        ],
+        "template": "minmax(0, .55fr) minmax(0, 1fr)"
       },
-      "assets/img/character-design/mr-mafia-man/h400-mr-mafia-man-1-65f01e.jpg",
-      "assets/img/character-design/mr-mafia-man/h400-a4cd2f0b-2b7d-4cd3-b285-3a65ffd45201-d65988.jpg",
-      "assets/img/character-design/mr-mafia-man/h400-characterdesign-mafia-workingfile-v002-1-9a42a4.jpg",
-      "assets/img/character-design/mr-mafia-man/h400-mr-mafia-man-29486a.jpg"
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/mr-mafia-man/h400-a4cd2f0b-2b7d-4cd3-b285-3a65ffd45201-d65988.jpg",
+          "assets/img/character-design/mr-mafia-man/h400-mr-mafia-man-1-65f01e.jpg",
+          "assets/img/character-design/mr-mafia-man/h400-mr-mafia-man-29486a.jpg"
+        ]
+      }
     ]
   },
   {
@@ -35,11 +45,21 @@ window.PROJECTS = [
     "category": "Character Design",
     "description": "Character work for Among Giants - turnarounds, expression sheets and design studies.",
     "items": [
-      "assets/img/character-design/among-giants/pickyMic_turnaround_lineup_v003.jpg",
-      "assets/img/character-design/among-giants/Loose_Bruce_Turnaround.jpg",
-      "assets/img/character-design/among-giants/img-3103-43b922.jpg",
-      "assets/img/character-design/among-giants/img-3125-45fe24.jpg",
-      "assets/img/character-design/among-giants/img-3131-33e08d.jpg"
+      "assets/img/character-design/among-giants/img-3131-33e08d.jpg",
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/among-giants/pickyMic_turnaround_lineup_v003.jpg",
+          "assets/img/character-design/among-giants/Loose_Bruce_Turnaround.jpg"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/among-giants/img-3103-43b922.jpg",
+          "assets/img/character-design/among-giants/img-3125-45fe24.jpg"
+        ]
+      }
     ]
   },
   {
@@ -47,15 +67,34 @@ window.PROJECTS = [
     "category": "Character Design",
     "description": "Pre-production character design for Mini Mic - silhouettes, line-ups, concepts and turnarounds.",
     "items": [
-      "assets/img/character-design/mini-mic/characters_redo_lineUp19.jpg",
-      "assets/img/character-design/mini-mic/Guys_concept.jpg",
-      "assets/img/character-design/mini-mic/Guys_turnaround.jpg",
-      "assets/img/character-design/mini-mic/Ladies_concept.jpg",
-      "assets/img/character-design/mini-mic/Mike.jpg",
-      "assets/img/character-design/mini-mic/MikeMightFight%202.jpg",
-      "assets/img/character-design/mini-mic/pre-prod_chdesign_lady.jpg",
-      "assets/img/character-design/mini-mic/silhuettes.jpg",
-      "assets/img/character-design/mini-mic/turnaround_.jpg"
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/mini-mic/Guys_concept.jpg",
+          "assets/img/character-design/mini-mic/Guys_turnaround.jpg"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/mini-mic/Mike.jpg",
+          "assets/img/character-design/mini-mic/turnaround_.jpg"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/mini-mic/Ladies_concept.jpg",
+          "assets/img/character-design/mini-mic/pre-prod_chdesign_lady.jpg"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/mini-mic/MikeMightFight%202.jpg",
+          "assets/img/character-design/mini-mic/silhuettes.jpg"
+        ]
+      }
     ]
   },
   {
@@ -63,15 +102,31 @@ window.PROJECTS = [
     "category": "Character Design",
     "description": "Character designs for Service Bus, from silhouette exploration through turnarounds and expression sheets.",
     "items": [
-      "assets/img/character-design/service-bus/h400-bus-passengers-chd-e62d34.jpg",
-      "assets/img/character-design/service-bus/h400-back-view-bus-8bbb8c.jpg",
-      "assets/img/character-design/service-bus/h400-rolf-79c4dd.jpg",
-      "assets/img/character-design/service-bus/h400-rolf-faces-416b51.png",
-      "assets/img/character-design/service-bus/h400-sb-characterdesign-002-8859e2.png",
-      "assets/img/character-design/service-bus/h400-sb-characterdesign-003-4b1d71.png",
-      "assets/img/character-design/service-bus/h400-sb-characterdesign-004-e72fcf.png",
-      "assets/img/character-design/service-bus/h400-sb-characterdesign-005-24be80.png",
-      "assets/img/character-design/service-bus/h400-sb-characterdesign-006-dd53d3.png"
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/service-bus/h400-sb-characterdesign-004-e72fcf.png",
+          "assets/img/character-design/service-bus/h400-rolf-faces-416b51.png",
+          "assets/img/character-design/service-bus/h400-sb-characterdesign-003-4b1d71.png"
+        ],
+        "template": "minmax(0, 1fr) minmax(0, .78fr) minmax(0, 1fr)"
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/service-bus/h400-sb-characterdesign-002-8859e2.png",
+          "assets/img/character-design/service-bus/h400-back-view-bus-8bbb8c.jpg",
+          "assets/img/character-design/service-bus/h400-sb-characterdesign-006-dd53d3.png"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/character-design/service-bus/h400-bus-passengers-chd-e62d34.jpg",
+          "assets/img/character-design/service-bus/h400-sb-characterdesign-005-24be80.png",
+          "assets/img/character-design/service-bus/h400-rolf-79c4dd.jpg"
+        ]
+      }
     ]
   },
   {
@@ -79,11 +134,11 @@ window.PROJECTS = [
     "category": "Character Design",
     "description": "Standalone character design studies and explorations outside of a specific production.",
     "items": [
-      "assets/img/character-design/studies/w400-129524b2-3ab0-4eb0-9f3c-d6ad8e57d090-007f62.jpg",
       "assets/img/character-design/studies/w400-32351444-3560-42eb-999d-36e8535638ff-1b23d5.jpg",
-      "assets/img/character-design/studies/w400-3d9b931a-1f17-428a-9874-c884c6dd8293-bacba8.jpg",
+      "assets/img/character-design/studies/w400-gunnar-concept-sheet-v004-aee036.png",
+      "assets/img/character-design/studies/w400-129524b2-3ab0-4eb0-9f3c-d6ad8e57d090-007f62.jpg",
       "assets/img/character-design/studies/w400-d266c2f6-fc9f-4833-8ca9-e2c3e9b6d48a-2a88e5.jpg",
-      "assets/img/character-design/studies/w400-gunnar-concept-sheet-v004-aee036.png"
+      "assets/img/character-design/studies/w400-3d9b931a-1f17-428a-9874-c884c6dd8293-bacba8.jpg"
     ]
   },
   {
@@ -95,7 +150,8 @@ window.PROJECTS = [
         "type": "video",
         "src": "assets/video/revestreker-looktest.mp4",
         "poster": "assets/img/concept-world/revestreker-looktest-poster.jpg",
-        "title": "Look test"
+        "title": "Look test",
+        "width": "46rem"
       },
       "assets/img/concept-world/2.5D%20scene/locations_v005.jpg",
       "assets/img/concept-world/2.5D%20scene/location_COversions_v001-protected-intensity-DEFAULT-V2.jpg",
@@ -107,15 +163,31 @@ window.PROJECTS = [
     "category": "Backgrounds",
     "description": "Lighting and environment look-development studies built and rendered in Blender.",
     "items": [
-      "assets/img/concept-world/blender-scene/h400-chimney-longpipe-bakednormals-pp-e515e1.jpg",
-      "assets/img/concept-world/blender-scene/h400-hus-2-copy-1d6340.jpg",
-      "assets/img/concept-world/blender-scene/h400-night004-e33fdb.jpg",
-      "assets/img/concept-world/blender-scene/h400-smash-looktest-asset-house-v002-el-1-b1719b.png",
-      "assets/img/concept-world/blender-scene/h400-snofritt002-c512b5.jpg",
-      "assets/img/concept-world/blender-scene/h400-snofritt004-953477.jpg",
-      "assets/img/concept-world/blender-scene/h400-sunset-v001-f5d2ed.png",
-      "assets/img/concept-world/blender-scene/h400-sunset-v002-9569ca.png",
-      "assets/img/concept-world/blender-scene/h400-sunset-v003-9569ca.png"
+      {
+        "type": "row",
+        "items": [
+          "assets/img/concept-world/blender-scene/h400-snofritt004-953477.jpg",
+          "assets/img/concept-world/blender-scene/h400-snofritt002-c512b5.jpg"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/concept-world/blender-scene/h400-sunset-v002-9569ca.png",
+          "assets/img/concept-world/blender-scene/h400-sunset-v001-f5d2ed.png",
+          "assets/img/concept-world/blender-scene/h400-night004-e33fdb.jpg",
+          "assets/img/concept-world/blender-scene/h400-sunset-v003-9569ca.png"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/concept-world/blender-scene/h400-smash-looktest-asset-house-v002-el-1-b1719b.png",
+          "assets/img/concept-world/blender-scene/h400-hus-2-copy-1d6340.jpg",
+          "assets/img/concept-world/blender-scene/h400-chimney-longpipe-bakednormals-pp-e515e1.jpg"
+        ],
+        "max": "52rem"
+      }
     ]
   },
   {
@@ -123,7 +195,6 @@ window.PROJECTS = [
     "category": "Backgrounds",
     "description": "Environment paintings and colour scripts for Service Bus, built in Blender and painted over for a 2.5D look.",
     "items": [
-      "assets/img/concept-world/service-bus/h400-cliffs-7d2925.jpg",
       "assets/img/concept-world/service-bus/h400-img-2285-0db030.jpg",
       "assets/img/concept-world/service-bus/h400-looktest06-9f59cd.png",
       "assets/img/concept-world/service-bus/h400-paintingguide-fortbbrushpack-ebe11c.png",
@@ -132,7 +203,14 @@ window.PROJECTS = [
       "assets/img/concept-world/service-bus/h400-tb-sq003-sh0190-paint-v003-cb7527.png",
       "assets/img/concept-world/service-bus/h400-tb-sq004-sh0370-paint-v005-el-f1416e.png",
       "assets/img/concept-world/service-bus/h400-tb-sq005-sh0490-painting-v006-el-f31e09.png",
-      "assets/img/concept-world/service-bus/h400-tb-tree-concept-v004-el-lightpole-7f25f7.png"
+      "assets/img/concept-world/service-bus/h400-tb-tree-concept-v004-el-lightpole-7f25f7.png",
+      {
+        "type": "row",
+        "items": [
+          "assets/img/concept-world/service-bus/h400-cliffs-7d2925.jpg"
+        ],
+        "max": "34rem"
+      }
     ]
   },
   {
@@ -140,17 +218,36 @@ window.PROJECTS = [
     "category": "Backgrounds",
     "description": "Concept and world-building studies - vehicle design, colour scripts and environment keys.",
     "items": [
-      "assets/img/concept-world/studies/h400-14ecee5c-7056-43dc-b105-9fcf761b27a6-68f7d7.jpg",
-      "assets/img/concept-world/studies/h400-97402cc3-c195-4ef3-b7db-d003080c5c06-25033e.jpg",
-      "assets/img/concept-world/studies/h400-98967feb-b4c3-436b-9cb0-b0bbed085514-89e483.jpg",
-      "assets/img/concept-world/studies/h400-b292b544-9b4b-48db-8dc9-e5a0c33fa101-829f99.jpg",
-      "assets/img/concept-world/studies/h400-bb9adbbf-064a-44d0-af36-9a98b298080a-8ea7ee.jpg",
-      "assets/img/concept-world/studies/h400-cardesign-finished-bakfra-v003-93e290.png",
-      "assets/img/concept-world/studies/h400-cardesign-finished-fourviews-v001-1-bfb638.png",
-      "assets/img/concept-world/studies/h400-colorscript-pic2-sonyafishing-02da2f.png",
-      "assets/img/concept-world/studies/h400-d4d7b31b-8e4b-408a-8631-d2abeaca1556-15f89c.jpg",
-      "assets/img/concept-world/studies/h400-fd2cba77-feb4-4648-95ee-f516a3f2b3ba-1bc7a0.jpg",
-      "assets/img/concept-world/studies/h400-lys-walkingforest-longshot-pan-v005-el-1-32165a.jpg"
+      {
+        "type": "row",
+        "items": [
+          "assets/img/concept-world/studies/h400-b292b544-9b4b-48db-8dc9-e5a0c33fa101-829f99.jpg",
+          "assets/img/concept-world/studies/h400-bb9adbbf-064a-44d0-af36-9a98b298080a-8ea7ee.jpg"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/concept-world/studies/h400-d4d7b31b-8e4b-408a-8631-d2abeaca1556-15f89c.jpg",
+          "assets/img/concept-world/studies/h400-cardesign-finished-bakfra-v003-93e290.png",
+          "assets/img/concept-world/studies/h400-cardesign-finished-fourviews-v001-1-bfb638.png"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/concept-world/studies/h400-98967feb-b4c3-436b-9cb0-b0bbed085514-89e483.jpg",
+          "assets/img/concept-world/studies/h400-97402cc3-c195-4ef3-b7db-d003080c5c06-25033e.jpg",
+          "assets/img/concept-world/studies/h400-14ecee5c-7056-43dc-b105-9fcf761b27a6-68f7d7.jpg"
+        ]
+      },
+      {
+        "type": "row",
+        "items": [
+          "assets/img/concept-world/studies/h400-fd2cba77-feb4-4648-95ee-f516a3f2b3ba-1bc7a0.jpg",
+          "assets/img/concept-world/studies/h400-lys-walkingforest-longshot-pan-v005-el-1-32165a.jpg"
+        ]
+      }
     ]
   },
   {
@@ -305,13 +402,13 @@ window.PROJECTS = [
           {
             "type": "locked",
             "name": "Hidden Islands (TV-series) - OYA Studio",
-            "password": "changeme",
+            "password": "BigSecrets",
             "note": "Boards for this series are under NDA. Get in touch and I'll walk you through them."
           },
           {
             "type": "locked",
             "name": "HØJ S2 (TV-series) - Skjaldborn",
-            "password": "changeme",
+            "password": "BigSecrets",
             "note": "Boards for this series are under NDA. Get in touch and I'll walk you through them."
           }
         ]
@@ -368,8 +465,25 @@ window.PROJECTS = [
     "category": "Other",
     "description": "Frames from the Gangar series - animated renders of traditional Norwegian gangar dance figures.",
     "items": [
-      "assets/img/other/gangar-reels/frame-martajohannes.jpg",
-      "assets/img/other/gangar-reels/frame-vossavalsen.jpg"
+      {
+        "type": "deck",
+        "title": "Gangar reels",
+        "ratio": "400/711",
+        "max": "26rem",
+        "images": [
+          "assets/video/gangar/martajohannes.mp4",
+          "assets/video/gangar/vossavalsen.mp4",
+          "assets/video/gangar/stabbmarsj.mp4",
+          "assets/video/gangar/skomakerhallingen.mp4",
+          "assets/video/gangar/karlsolo.mp4",
+          "assets/video/gangar/egerliten.mp4",
+          "assets/video/gangar/bombom.mp4",
+          "assets/video/gangar/baansull-v003-glitch.mp4",
+          "assets/video/gangar/fjukanrjukan.mp4",
+          "assets/video/gangar/overgang.mp4",
+          "assets/video/gangar/outro.mp4"
+        ]
+      }
     ]
   },
   {
@@ -377,7 +491,7 @@ window.PROJECTS = [
     "category": "Other",
     "description": "Stills and key art from Service Bus.",
     "items": [
-      "assets/img/other/service-bus-game/poster.jpg",
+      "assets/img/other/service-bus-game/sbg_snapshot.png",
       "assets/img/other/service-bus-game/still-01.jpg",
       "assets/img/other/service-bus-game/still-02.jpg",
       "assets/img/other/service-bus-game/still-03.jpg"
