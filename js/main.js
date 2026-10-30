@@ -685,7 +685,9 @@
 
     form.addEventListener('submit', function (event) {
       event.preventDefault();
-      if (input.value === item.password) {
+      var val = (input.value || '').trim();
+      var target = (item.password || '').trim();
+      if (val === target || val.toLowerCase() === target.toLowerCase()) {
         if (item.href) {
           window.location.href = item.href;
           return;
