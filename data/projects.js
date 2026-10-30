@@ -429,6 +429,7 @@ window.PROJECTS = [
             "type": "locked",
             "name": "Hidden Islands (TV-series) - OYA Studio",
             "password": "BigSecrets",
+            "href": "hidden-islands.html",
             "note": "Boards for this series are under NDA. Get in touch and I'll walk you through them."
           },
           {

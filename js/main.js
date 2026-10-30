@@ -686,6 +686,10 @@
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       if (input.value === item.password) {
+        if (item.href) {
+          window.location.href = item.href;
+          return;
+        }
         note.textContent = item.note || 'Unlocked.';
         note.hidden = false;
         form.hidden = true;

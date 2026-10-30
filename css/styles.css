@@ -859,6 +859,112 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   75% { transform: translateX(5px); }
 }
 
+/* --- Hidden Islands NDA page ---------------------------------------------- */
+
+.hi-episode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .85rem;
+  max-height: calc(100svh - var(--bar-offset) - 2rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  border-radius: var(--r-xl);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.hi-episode .project-title {
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+}
+
+.hi-video-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  background: var(--black);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.hi-video {
+  width: 100%;
+  max-height: 48svh;
+  height: auto;
+  object-fit: contain;
+  background: var(--black);
+}
+
+.hi-thumbs-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: .45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.hi-thumbs-row .shot {
+  border-radius: var(--r-sm);
+}
+
+.hi-thumbs-row .shot img {
+  width: 100%;
+  max-height: 14svh;
+  object-fit: contain;
+  background: var(--black);
+}
+
+.director-card {
+  max-width: 54rem;
+  margin: clamp(2.5rem, 5vw, 4rem) 0 clamp(2rem, 4vw, 3rem);
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  border-radius: var(--r-xl);
+  background: var(--surface);
+  border-left: 4px solid var(--orange);
+}
+
+.director-quote {
+  margin: 0 0 1.25rem;
+  font-size: clamp(.98rem, 1.15vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--white);
+}
+
+.director-quote p {
+  margin: 0 0 .85rem;
+}
+
+.director-quote p:last-child {
+  margin-bottom: 0;
+}
+
+.director-cite {
+  display: block;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1rem;
+  font-style: normal;
+  color: var(--orange-light);
+}
+
+.director-role {
+  display: block;
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: .875rem;
+  color: var(--bone);
+  margin-top: .15rem;
+}
+
+.hi-back-wrap {
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
 /* --- back to top ---------------------------------------------------------- */
 
 .to-top {
