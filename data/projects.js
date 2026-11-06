@@ -436,6 +436,7 @@ window.PROJECTS = [
             "type": "locked",
             "name": "HØJ S2 (TV-series) - Skjaldborn",
             "password": "BigSecrets",
+            "href": "hoj-s2.html",
             "note": "Boards for this series are under NDA. Get in touch and I'll walk you through them."
           }
         ]
